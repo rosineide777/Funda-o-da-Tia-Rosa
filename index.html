@@ -529,6 +529,161 @@
         <div id="qr-code-container">
           <p id="qr-text">Clique em um valor acima para gerar o QR Code PIX.</p>
           <img id="qr-code-img" src="" alt="QR Code PIX" style="display:none;">
+
+          <style>
+        .vaquinha-progresso {
+            width: 100%;
+            padding: 18px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        .progresso-topo {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .progresso-topo div {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .progresso-label {
+            color: #777;
+            font-size: 13px;
+        }
+
+        #valorArrecadado {
+            color: #22a447;
+            font-size: 25px;
+        }
+
+        #valorMeta {
+            color: #333;
+            font-size: 18px;
+        }
+
+        .meta-info {
+            text-align: right;
+        }
+
+        .barra-fundo {
+            width: 100%;
+            height: 13px;
+            background: #e9ecef;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .barra-preenchida {
+            width: 0%;
+            height: 100%;
+            background: #22a447;
+            border-radius: 20px;
+            transition: width 0.8s ease;
+        }
+
+        .progresso-rodape {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px;
+            margin-top: 10px;
+            font-size: 12px;
+        }
+
+        #porcentagem {
+            color: #22a447;
+            font-weight: bold;
+        }
+
+        #valorFaltante {
+            color: #666;
+            text-align: right;
+        }
+
+        @media (max-width: 400px) {
+            #valorArrecadado {
+                font-size: 21px;
+            }
+
+            #valorMeta {
+                font-size: 16px;
+            }
+
+            .progresso-rodape {
+                font-size: 11px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="vaquinha-progresso">
+
+        <div class="progresso-topo">
+            <div>
+                <span class="progresso-label">Já arrecadamos</span>
+                <strong id="valorArrecadado"></strong>
+            </div>
+
+            <div class="meta-info">
+                <span class="progresso-label">Nossa meta</span>
+                <strong id="valorMeta"></strong>
+            </div>
+        </div>
+
+        <div class="barra-fundo">
+            <div class="barra-preenchida" id="barraProgresso"></div>
+        </div>
+
+        <div class="progresso-rodape">
+            <strong id="porcentagem"></strong>
+            <span id="valorFaltante"></span>
+        </div>
+
+    </section>
+
+    <script>
+        // ALTERE OS VALORES AQUI
+        const metaVaquinha = 5000;
+        const arrecadadoVaquinha = 3462.55;
+
+        const porcentagem = Math.min(
+            (arrecadadoVaquinha / metaVaquinha) * 100,
+            100
+        );
+
+        const formatarDinheiro = valor =>
+            valor.toLocaleString('pt-BR', {
+                style: 'currency',
+                currency: 'BRL'
+            });
+
+        document.getElementById('valorArrecadado').textContent =
+            formatarDinheiro(arrecadadoVaquinha);
+
+        document.getElementById('valorMeta').textContent =
+            formatarDinheiro(metaVaquinha);
+
+        document.getElementById('barraProgresso').style.width =
+            porcentagem + '%';
+
+        document.getElementById('porcentagem').textContent =
+            Math.floor(porcentagem) + '% alcançado';
+
+        document.getElementById('valorFaltante').textContent =
+            'Faltam ' + formatarDinheiro(
+                Math.max(metaVaquinha - arrecadadoVaquinha, 0)
+            );
+    </script>
           
           <!-- BOTÃO DE CONFIRMAÇÃO PÓS-PIX (Dispara Purchase / CompletePayment) -->
           <div id="confirmacao-doacao-container" style="display:none;">

@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Doe Hoje</title>
+   <link rel="icon" href="/SiteVaquinha2/imagens/imagem2.png">
+
+  <meta name="description" content="A Fundação da Tia Rosa transforma vidas todos os dias. Aqui, cada animal resgatado recebe cuidado veterinário, carinho e a oportunidade de recomeçar.">
+
+
+<!-- ========================================== -->
+<!-- CONFIGURAÇÃO DOS PIXELS (META E TIKTOK)    -->
+<!-- ========================================== -->
+<script>
+  const META_PIXEL_ID = '2359193844887659';
+  const TIKTOK_PIXEL_ID = 'DB3SUBBC77U13E11L430';
+
+  /* Meta Pixel Base Code */
+  !function(f,b,e,v,n,t,s){
+    if(f.fbq)return;
+    n=f.fbq=function(){
+      n.callMethod ? n.callMethod.apply(n,arguments) : n.queue.push(arguments)
+    };
+    if(!f._fbq)f._fbq=n;
+    n.push=n;
+    n.loaded=!0;
+    n.version='2.0';
+    n.queue=[];
+    t=b.createElement(e);
+    t.async=!0;
+    t.src=v;
+    s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s);
+  }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+  fbq('init', META_PIXEL_ID);
+  fbq('track', 'PageView');
+
+  /* TikTok Pixel Base Code */
+  !function (w, d, t) {
+    w.TiktokAnalyticsObject=t;
+    var ttq=w[t]=w[t]||[];
+
+    ttq.methods=[
+      "page","track","identify","instances","debug","on","off",
+      "once","ready","alias","group","enableCookie","disableCookie"
+    ];
+
+    ttq.setAndVerifyProperties=function(t,e,r){
+      let n=["debug","instances","sendBeacon","session_id"];
+      for(let o of n)
+        ttq.hasOwnProperty(o)&&ttq[o](t,e,r);
+    };
+
+    ttq.load=function(e,n){
+      var i="https://analytics.tiktok.com/i18n/pixel/events.js";
+      ttq._i=ttq._i||{};
+      ttq._i[e]=[];
+      ttq._i[e]._u=i;
+      ttq._t=ttq._t||{};
+      ttq._t[e]=+new Date;
+      ttq._o=ttq._o||{};
+      ttq._o[e]=n||{};
+
+      var o=document.createElement("script");
+      o.type="text/javascript";
+      o.async=!0;
+      o.src=i+"?sdkid="+e+"&lib="+t;
+
+      var a=document.getElementsByTagName("script")[0];
+      a.parentNode.insertBefore(o,a);
+    };
+
+    ttq.load(TIKTOK_PIXEL_ID);
+    ttq.page();
+
+  }(window, document, 'ttq');
+</script>
+
+<noscript>
+  <img
+    height="1"
+    width="1"
+    style="display:none"
+    src="https://www.facebook.com/tr?id=2359193844887659&ev=PageView&noscript=1"
+    alt=""
+  />
+</noscript>
+
+
+  
+<style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    header {
+      background-color: #114c21;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    nav {
+      background-color: #f3f3f3;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      text-align: center;
+      padding: 10px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav button {
+      padding: 12px 20px;
+      margin: 5px;
+      border: 1px solid #ccc;
+      background: white;
+      color: #333;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 6px;
+      transition: background 0.3s, color 0.3s;
+      box-shadow: 0 2px 5px rgb(0 0 0 / 0.05);
+    }
+
+    nav button:first-child {
+      background-color: #114c21;
+      color: white;
+      border-color: #114c21;
+    }
+
+    nav button:hover {
+      background: #1a4f02;
+      color: white;
+      border-color: #1a4f02;
+      box-shadow: 0 4px 10px rgb(26 79 2 / 0.4);
+    }
+
+    .valor-btn.active {
+      background-color: #00c050 !important;
+      border-color: #00c050 !important;
+      color: white !important;
+      transform: scale(1.05);
+      box-shadow: 0 5px 15px rgb(0 192 80 / 0.7) !important;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .card {
+      background: white;
+      padding: 32px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      margin-bottom: 40px;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    }
+
+    h1, h2, h3, h4 {
+      color: #114c21;
+      text-align: center;
+      margin-bottom: 18px;
+      font-weight: 700;
+      user-select: none;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      user-select: text;
+    }
+
+    .pix-info {
+      margin-top: 40px;
+      background: #f9f9f9;
+      padding: 30px 24px;
+      border-radius: 12px;
+      text-align: center;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 3px 12px rgb(0 0 0 / 0.08);
+      user-select: text;
+    }
+
+    .pix-info img {
+      margin-bottom: 16px;
+    }
+
+    .pix-info h4 {
+      margin-bottom: 20px;
+      font-size: 22px;
+    }
+
+    .pix-info ol {
+      text-align: left;
+      display: inline-block;
+      max-width: 300px;
+      margin: 0 auto 25px;
+      padding-left: 20px;
+      font-size: 16px;
+      color: #555;
+    }
+
+    .pix-key {
+      margin: 0 auto 10px;
+      background: #eee;
+      padding: 14px 18px;
+      max-width: 320px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 18px;
+      color: #333;
+      user-select: all;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .btn-copiar-pix {
+      background: #114c21;
+      color: white;
+      font-weight: 700;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 3px 8px rgb(17 76 33 / 0.7);
+      max-width: 320px;
+      margin: 0 auto 20px;
+      display: block;
+      position: relative;
+    }
+
+    .msg-copiado {
+      display: none;
+      position: absolute;
+      top: -28px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #00c050;
+      color: white;
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 14px;
+      white-space: nowrap;
+      z-index: 10;
+    }
+
+    footer {
+      background: #333;
+      color: #f1f1f1;
+      padding: 40px 15px 25px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: #f1f1f1;
+      margin: 0 12px;
+      font-size: 20px;
+      text-decoration: none;
+    }
+
+    .video-container {
+      max-width: 800px;
+      margin: 30px auto 50px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+
+    .depoimentos-lista {
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+      height: 200px;
+    }
+
+    .depoimento-item {
+      background: #f9f9f9;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 3px 10px rgb(0 0 0 / 0.05);
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+
+    .depoimento-item img {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(4px);
+      justify-content: center;
+      align-items: center;
+      z-index: 99999;
+    }
+
+    .modal-content {
+      background: white;
+      padding: 30px 40px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      max-width: 90vw;
+    }
+
+    .loader {
+      border: 4px solid #f3f3f3;
+      border-top: 4px solid #114c21;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 1s linear infinite;
+      margin: 0 auto 15px;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    #qr-code-container {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    #qr-code-img {
+      display: block;
+      width: 100%;
+      max-width: 250px;
+      height: auto;
+      margin: 20px auto 0;
+    }
+
+    .btn-ja-fiz-pix {
+      background-color: #00c050;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 20px;
+      display: inline-block;
+      box-shadow: 0 4px 10px rgba(0,192,80,0.4);
+      transition: background 0.3s;
+    }
+
+    .btn-ja-fiz-pix:hover {
+      background-color: #009b40;
+    }
+
+    /* Ajustes para celulares */
+    @media (max-width: 600px) {
+      nav {
+        padding: 8px 5px;
+      }
+
+      nav button {
+        padding: 10px 12px;
+        margin: 3px;
+        font-size: 14px;
+      }
+
+      section {
+        padding: 25px 12px;
+      }
+
+      .card {
+        padding: 20px 15px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+
+      .pix-info {
+        padding: 22px 15px;
+      }
+
+      .pix-key {
+        font-size: 15px;
+        overflow-wrap: anywhere;
+      }
+
+      .depoimentos-lista {
+        height: 240px;
+      }
+
+      .depoimento-item {
+        padding: 15px;
+        gap: 10px;
+      }
+
+      .depoimento-item img {
+        width: 50px;
+        height: 50px;
+      }
+
+      .modal-content {
+        padding: 25px 20px;
+      }
+    }
+</style>
+
+</head>
+<body>
+
+<header>
+  <img src="/SiteVaquinha2/imagens/imagem2.png" alt="Fundação da Tia Rosa" class="header-img" style="width: 100%; max-width: 1200px; height: auto; display: block; margin: 0 auto;">
+</header>
+
+<nav>
+  <button id="btn-quem-somos">Quem somos</button>
+  <button id="btn-como-doar">Como doar</button>
+  <button id="btn-depoimentos">Depoimentos</button>
+  <button id="btn-contato">Contato</button>
+</nav>
+
+<section id="quem-somos">
+  <div class="card">
+    <h2>Nosso Objetivo</h2>
+<p>
+  A pequena <strong>Lívia</strong> precisa da nossa união para salvar sua vida. Ela enfrenta um grave problema de saúde e precisa passar por uma cirurgia de urgência para remover um tumor no rosto que ameaça sua saúde e seu desenvolvimento. <strong>Cada ajuda, por menor que pareça,</strong> é a chance de devolver a cura, a esperança e o sorriso para ela. Esta é uma campanha independente e familiar, realizada por quem luta incansavelmente pelo tratamento, sem apoio de órgãos públicos.
+</p>
+
+
+    <!-- ========================================== 
+    <div class="media-container" style="display: flex; flex-direction: column; gap: 20px; align-items: center;">
+      <div class="image-container" style="width: 100%; max-width: 600px;">
+        <img src="https://www.bnews.com.br/media/uploads/janeiro_2023/cachorro2.jpg" alt="Banner Fundação da Tia Rosa" style="width: 100%; height: auto; border-radius: 10px;">
+      </div> -->
+
+      <div class="video-container" style="width: 100%; max-width: 600px;">
+        <video controls style="width: 100%; height: auto; border-radius: 10px;">
+          <source src="/SiteVaquinha2/imagens/video.mp4" type="video/mp4">
+          Seu navegador não suporta vídeo HTML5.
+        </video>
+      </div>
+    </div>
+
+    <div style="max-width: 700px; margin: 40px auto; line-height: 1.6; text-align: center; color: #333;" class="impacto-texto">
+      <h1 class="impacto-titulo" style="color: #00c050;">Quer saber o impacto real da sua ajuda? Olha só o que você pode fazer:</h1>
+      <p><strong>Com R$15:</strong> ajuda a comprar colírios essenciais para o tratamento diário.</p>
+      <p><strong>Com R$30:</strong> garante medicamentos e curativos para os primeiros dias.</p>
+      <p><strong>Com R$75:</strong> contribui para a compra de insumos médicos necessários.</p>
+      <p><strong>Com R$150:</strong> ajuda a custear uma consulta ou exame oftalmológico de urgência.</p>
+      <p><strong>Com R$350:</strong> apoia as despesas com transporte e deslocamento para o hospital.</p>
+      <p><strong>Com R$750:</strong> dá um salto enorme rumo à realização da cirurgia que salvará a visão.</p>
+      <p><strong>Sua doação vira esperança. Sua empatia vira luz.</strong></p>
+      <p><strong>Ajude agora. A Lívia precisa de você.</strong></p>
+    </div>
+
+    <div id="loading-modal" class="modal-overlay">
+      <div class="modal-content">
+        <div class="loader"></div>
+        <h3>Gerando QR Code PIX...</h3>
+        <p>Aguarde um momento. Ele será exibido automaticamente.</p>
+      </div>
+    </div>
+
+    <section id="doacao-pix" style="margin-top:40px; padding:0;">
+      <div class="card" style="box-shadow:none; padding:0; margin:0;">
+        <h2>Faça sua doação via PIX</h2>
+        <p style="text-align:center; font-weight:600; font-size:18px;">
+          Clique no valor que deseja doar para gerar o QR Code.
+        </p>
+
+<div class="cta-buttons" style="display:flex; flex-wrap:wrap; gap:12px; justify-content:center; margin-top:20px;">
+          <button class="valor-btn" data-valor="2" style="padding:12px 20px; font-size:16px; font-weight:bold; cursor:pointer; border-radius:8px; border:1px solid #114c21; background:#114c21; color:#fff;">R$2</button>
+          <button class="valor-btn" data-valor="10" style="padding:12px 20px; font-size:16px; font-weight:bold; cursor:pointer; border-radius:8px; border:1px solid #114c21; background:#114c21; color:#fff;">R$10</button>
+          <button class="valor-btn" data-valor="15" style="padding:12px 20px; font-size:16px; font-weight:bold; cursor:pointer; border-radius:8px; border:1px solid #114c21; background:#114c21; color:#fff;">R$15</button>
+          <button class="valor-btn" data-valor="30" style="padding:12px 20px; font-size:16px; font-weight:bold; cursor:pointer; border-radius:8px; border:1px solid #114c21; background:#114c21; color:#fff;">R$30</button>
+          <button class="valor-btn" data-valor="75" style="padding:12px 20px; font-size:16px; font-weight:bold; cursor:pointer; border-radius:8px; border:1px solid #114c21; background:#114c21; color:#fff;">R$75</button>
+          <button class="valor-btn" data-valor="150" style="padding:12px 20px; font-size:16px; font-weight:bold; cursor:pointer; border-radius:8px; border:1px solid #114c21; background:#114c21; color:#fff;">R$150</button>
+          <button class="valor-btn" data-valor="350" style="padding:12px 20px; font-size:16px; font-weight:bold; cursor:pointer; border-radius:8px; border:1px solid #114c21; background:#114c21; color:#fff;">R$350</button>
+          <button class="valor-btn" data-valor="750" style="padding:12px 20px; font-size:16px; font-weight:bold; cursor:pointer; border-radius:8px; border:1px solid #114c21; background:#114c21; color:#fff;">R$750</button>
+        </div>
+
+        <div id="qr-code-container">
+          <p id="qr-text">Clique em um valor acima para gerar o QR Code PIX.</p>
+          <img id="qr-code-img" src="" alt="QR Code PIX" style="display:none;">
+
+              <style>
+        .vaquinha-progresso {
+            width: 100%;
+            padding: 18px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        .progresso-topo {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .progresso-topo div {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .progresso-label {
+            color: #777;
+            font-size: 13px;
+        }
+
+        #valorArrecadado {
+            color: #22a447;
+            font-size: 25px;
+        }
+
+        #valorMeta {
+            color: #333;
+            font-size: 18px;
+        }
+
+        .meta-info {
+            text-align: right;
+        }
+
+        .barra-fundo {
+            width: 100%;
+            height: 13px;
+            background: #e9ecef;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .barra-preenchida {
+            width: 0%;
+            height: 100%;
+            background: #22a447;
+            border-radius: 20px;
+            transition: width 0.8s ease;
+        }
+
+        .progresso-rodape {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px;
+            margin-top: 10px;
+            font-size: 12px;
+        }
+
+        #porcentagem {
+            color: #22a447;
+            font-weight: bold;
+        }
+
+        #valorFaltante {
+            color: #666;
+            text-align: right;
+        }
+
+        @media (max-width: 400px) {
+            #valorArrecadado {
+                font-size: 21px;
+            }
+
+            #valorMeta {
+                font-size: 16px;
+            }
+
+            .progresso-rodape {
+                font-size: 11px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="vaquinha-progresso">
+
+        <div class="progresso-topo">
+            <div>
+                <span class="progresso-label">Já arrecadamos</span>
+                <strong id="valorArrecadado"></strong>
+            </div>
+
+            <div class="meta-info">
+                <span class="progresso-label">Nossa meta</span>
+                <strong id="valorMeta"></strong>
+            </div>
+        </div>
+
+        <div class="barra-fundo">
+            <div class="barra-preenchida" id="barraProgresso"></div>
+        </div>
+
+        <div class="progresso-rodape">
+            <strong id="porcentagem"></strong>
+            <span id="valorFaltante"></span>
+        </div>
+
+    </section>
+
+    <script>
+        // ALTERE OS VALORES AQUI
+        const metaVaquinha = 50000;
+        const arrecadadoVaquinha = 23462.55;
+
+        const porcentagem = Math.min(
+            (arrecadadoVaquinha / metaVaquinha) * 100,
+            100
+        );
+
+        const formatarDinheiro = valor =>
+            valor.toLocaleString('pt-BR', {
+                style: 'currency',
+                currency: 'BRL'
+            });
+
+        document.getElementById('valorArrecadado').textContent =
+            formatarDinheiro(arrecadadoVaquinha);
+
+        document.getElementById('valorMeta').textContent =
+            formatarDinheiro(metaVaquinha);
+
+        document.getElementById('barraProgresso').style.width =
+            porcentagem + '%';
+
+        document.getElementById('porcentagem').textContent =
+            Math.floor(porcentagem) + '% alcançado';
+
+        document.getElementById('valorFaltante').textContent =
+            'Faltam ' + formatarDinheiro(
+                Math.max(metaVaquinha - arrecadadoVaquinha, 0)
+            );
+    </script>
+          
+          <!-- BOTÃO DE CONFIRMAÇÃO PÓS-PIX (Dispara Purchase / CompletePayment) -->
+          <div id="confirmacao-doacao-container" style="display:none;">
+            <button id="btn-ja-fiz-pix" class="btn-ja-fiz-pix">Já fiz meu Pix / Concluir Doação</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <h1 style="margin-top:50px;">Faça sua doação de forma simples e rápida seguindo os passos abaixo:</h1>
+    
+    <div class="pix-info">
+      <img src="https://blog.caviarcriativo.com/wp-content/uploads/2025/03/Download-Logo-Pix.png" width="100" alt="Pix">
+      <h4>Como doar qualquer valor via PIX</h4>
+      <ol>
+        <li>Copie a chave PIX abaixo</li>
+        <li>Abra seu app bancário</li>
+        <li>Escolha "PIX" e "Transferir"</li>
+        <li>Cole a chave</li>
+        <li>Digite o valor</li>
+        <li>Confirme e envie</li>
+      </ol>
+      <div class="pix-key" id="pix-key-2" tabindex="0" title="Clique para copiar a chave PIX">
+        fundacaodatiarosa@gmail.com
+      </div>
+      <button class="btn-copiar-pix" id="btn-copiar-pix-2" aria-label="Copiar chave PIX">
+        Copiar PIX
+        <span class="msg-copiado">Copiado!</span>
+      </button>
+      <p><strong>Recebedor:</strong> Rosineide Gomes Viana</p>
+      <p><strong>Importante:</strong> Todas as doações são processadas de forma segura através do PIX. Você pode confirmar o envio do PIX diretamente no seu aplicativo bancário.</p>
+      <p><strong>Importante:</strong> Não sou uma ONG, não recebo ajuda do governo.</p>
+    </div>
+  </div>
+</section>
+
+<section id="como-doar" style="display:none;">
+  <div class="card">
+    <h2>Como doar</h2>
+    <p style="text-align:center; font-weight:600; font-size:18px;">Faça sua doação de forma simples e rápida seguindo os passos abaixo:</p>
+    <div class="pix-info" style="margin-top:20px;">
+      <img src="https://blog.caviarcriativo.com/wp-content/uploads/2025/03/Download-Logo-Pix.png" width="100" alt="Pix">
+      <h4>Como doar via PIX</h4>
+      <ol>
+        <li>Copie a chave PIX abaixo</li>
+        <li>Abra seu app bancário</li>
+        <li>Escolha "PIX" e "Transferir"</li>
+        <li>Cole a chave</li>
+        <li>Digite o valor</li>
+        <li>Confirme e envie</li>
+      </ol>
+      <div class="pix-key" id="pix-key" tabindex="0" title="Clique para copiar a chave PIX">fundacaodatiarosa@gmail.com</div>
+      <button class="btn-copiar-pix" id="btn-copiar-pix" aria-label="Copiar chave PIX">
+        Copiar PIX
+        <span class="msg-copiado">Copiado!</span>
+      </button>
+      <p><strong>Responsável:</strong> Rosineide Gomes Viana</p>
+    </div>
+  </div>
+</section>
+
+<section id="depoimentos" style="display:none;">
+  <div class="card">
+    <h2>Depoimentos</h2>
+    <p style="max-width:600px; margin: auto 0 30px; font-style: italic; text-align: center;">
+      Veja o que nossos apoiadores têm a dizer sobre a campanha de arrecadação para a cirurgia da Lívia.
+    </p>
+    <div class="depoimentos-lista">
+      <div class="depoimento-item" style="display: flex;">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIqtpz3kVHQNmvikbGmRs0qB8x-At_xn-LLUWUZoW8Og&s=10" alt="Foto da Maria" />
+        <div>
+          <p>"Desde que acompanhei a história da Lívia, soube que precisava ajudar. Saber que nossa contribuição está aproximando ele da cirurgia é gratificante."</p>
+          <p><strong>Maria A.</strong></p>
+        </div>
+      </div>
+
+      <div class="depoimento-item" style="display:none;">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKo2u1Po8VEzT0gTZ-JnjcOG3gLPxLM8asWCSVzYap-A&s=10" alt="Foto do João" />
+        <div>
+          <p>"Admiro a transparência da família e a força dessa corajosa luta. Cada doação é um passo importante para salvar a visão dessa criança."</p>
+          <p><strong>João P.</strong></p>
+        </div>
+      </div>
+
+      <div class="depoimento-item" style="display:none;">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4LD4_mW7j1fNrZtV-Et3tvvmpVioWonxtalUIDcDntg&s=10" alt="Foto da Ana" />
+        <div>
+          <p>"Participar dessa corrente do bem me enche de esperança. Ver a união de todos pela saúde da Lívia é emocionante."</p>
+          <p><strong>Ana M.</strong></p>
+        </div>
+      </div>
+
+      <div class="depoimento-item" style="display:none;">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLE5ZFrcyq7trHddbXET-y019PRi0aXZqnmjhOrrMDpw&s=10" alt="Foto do Carlos" />
+        <div>
+          <p>"É inspirador ver como pequenas contribuições juntas podem custear um tratamento tão urgente. Recomendo a todos que ajudem."</p>
+          <p><strong>Carlos R.</strong></p>
+        </div>
+      </div>
+
+      <div class="depoimento-item" style="display:none;">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM1s3sYmYU1ZEgdf4QJBBpUmHEtP-hf1MVwrCqafzzQg&s=10" alt="Foto da Juliana" />
+        <div>
+          <p>"Estou em oração e fazendo minha parte para que a cirurgia aconteça o quanto antes. Tenho certeza de que dará tudo certo!"</p>
+          <p><strong>Juliana S.</strong></p>
+        </div>
+      </div>
+
+      <div class="depoimento-item" style="display:none;">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTV3rT006PoVynKfUOuKiiocS5lOvMQ1bSYTK4wMQMPsg&s=10" alt="Foto do Felipe" />
+        <div>
+          <p>"Cada doação, compartilhamento e palavra de apoio conta muito. O tempo é curto e precisamos continuar ajudando!"</p>
+          <p><strong>Felipe M.</strong></p>
+        </div>
+      </div>
+
+      <div class="depoimento-item" style="display:none;">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBLLaweTY9p7MYjqt62OIngU4gGazq5CY_29N5KWYSmg&s=10" alt="Foto da Laura" />
+        <div>
+          <p>"Doar para a saúde de uma criança é plantar um futuro iluminado para ela. Fico feliz em poder estender a mão."</p>
+          <p><strong>Laura F.</strong></p>
+        </div>
+      </div>
+
+      <div class="depoimento-item" style="display:none;">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTA_VvkxGgLacLQHPVAy47UMr6pkUnP20wunl1v_0VBQ&s=10" alt="Foto do Ricardo" />
+        <div>
+          <p>"A determinação da família nessa corrida contra o tempo nos motiva a continuar divulgando e contribuindo."</p>
+          <p><strong>Ricardo T.</strong></p>
+        </div>
+      </div>
+
+      <div class="depoimento-item" style="display:none;">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3p9vuKDxerccEeooVaBzbUL_vaJ5k47XRjF72U4TUtA&s=10" alt="Foto da Fernanda" />
+        <div>
+          <p>"Saber que minha doação ajuda nos exames e medicamentos esquenta o coração. Que ele recupere a visão logo!"</p>
+          <p><strong>Fernanda L.</strong></p>
+        </div>
+      </div>
+
+      <div class="depoimento-item" style="display:none;">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTo0qIGDJ1vN743K5Dd7uo7UGxSmD4nqPFuso-lNampZA&s=10" alt="Foto do André" />
+        <div>
+          <p>"Ajudar quem precisa de um procedimento de urgência é um dever de empatia. Vamos juntos alcançar essa meta!"</p>
+          <p><strong>André G.</strong></p>
+        </div>
+      </div>
+
+      <div class="depoimento-item" style="display:none;">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTe9qykbxt-9y0tTjhb12QX6ILOL83xoL6YYnECf7Imew&s=10" alt="Foto da Camila" />
+        <div>
+          <p>"Acompanhar cada avanço da arrecadação me deixa confiante. Sou grata por poder contribuir com essa história."</p>
+          <p><strong>Camila P.</strong></p>
+        </div>
+      </div>
+
+      <div class="depoimento-item" style="display:none;">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQui74oXhhCXUipsD0BGNn-KqtzbGIeaRrzj5Qxq5mgbQ&s=10" alt="Foto do Gustavo" />
+        <div>
+          <p>"Fazer parte desta corrente de solidariedade para salvar a visão da Lívia é algo transformador."</p>
+          <p><strong>Gustavo H.</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contato" style="display:none;">
+  <div class="card">
+    <h2>Contato</h2>
+    <p style="max-width:600px; margin: auto;">
+      Para dúvidas, sugestões ou informações, envie um email para <a href="mailto:fundacaodatiarosa@gmail.com">fundacaodatiarosa@gmail.com</a> e tire suas dúvidas.
+    </p>
+  </div>
+</section>
+
+<footer style="background-color: #918a8a; text-align: center; padding: 2rem 1rem; color: #e0e0e0; font-size: 0.95rem; border-top: 3px solid #15d86d;">
+  <p>© 2026 Todos os direitos reservados.</p>
+  <p>
+    <a href="index.html" aria-label="Facebook" rel="noopener">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" width="28" height="28" style="filter: brightness(0) invert(1); margin: 0 6px; vertical-align: middle;">
+    </a>
+    <a href="index.html" aria-label="Instagram" rel="noopener">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" width="28" height="28" style="filter: brightness(0) invert(1); margin: 0 6px; vertical-align: middle;">
+    </a>
+  </p>
+  <p>
+    <a href="termos.html" style="color:#000000; text-decoration:none;">Termos de Uso</a> |
+    <a href="privacidade.html" style="color:#000000; text-decoration:none;">Política de Privacidade</a>
+  </p>
+</footer>
+
+
+<script>
+  // ==========================================
+  // CONFIGURAÇÕES E CONTROLE
+  // ==========================================
+
+  let valorSelecionadoAtual = 15.00;
+  let confirmacaoJaEnviada = false;
+  let geracaoAtual = 0;
+
+  // ==========================================
+  // NAVEGAÇÃO ENTRE SEÇÕES
+  // ==========================================
+
+  const btnQuemSomos = document.getElementById('btn-quem-somos');
+  const btnComoDoar = document.getElementById('btn-como-doar');
+  const btnDepoimentos = document.getElementById('btn-depoimentos');
+  const btnContato = document.getElementById('btn-contato');
+
+  const secQuemSomos = document.getElementById('quem-somos');
+  const secComoDoar = document.getElementById('como-doar');
+  const secDepoimentos = document.getElementById('depoimentos');
+  const secContato = document.getElementById('contato');
+
+  function esconderTodasSecoes() {
+    [secQuemSomos, secComoDoar, secDepoimentos, secContato]
+      .forEach(secao => {
+        if (secao) secao.style.display = 'none';
+      });
+  }
+
+  function configurarNavegacao(botao, secao) {
+    if (!botao || !secao) return;
+
+    botao.addEventListener('click', () => {
+      esconderTodasSecoes();
+      secao.style.display = 'block';
+
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
+
+  configurarNavegacao(btnQuemSomos, secQuemSomos);
+  configurarNavegacao(btnComoDoar, secComoDoar);
+  configurarNavegacao(btnDepoimentos, secDepoimentos);
+  configurarNavegacao(btnContato, secContato);
+
+  esconderTodasSecoes();
+
+  if (secQuemSomos) {
+    secQuemSomos.style.display = 'block';
+  }
+
+  // ==========================================
+  // DEPOIMENTOS AUTOMÁTICOS
+  // ==========================================
+
+  const depoimentos = document.querySelectorAll('.depoimento-item');
+  let depoAtual = 0;
+
+  if (depoimentos.length > 0) {
+    depoimentos.forEach((item, index) => {
+      item.style.display = index === 0 ? 'flex' : 'none';
+    });
+
+    if (depoimentos.length > 1) {
+      setInterval(() => {
+        depoimentos[depoAtual].style.display = 'none';
+
+        depoAtual = (depoAtual + 1) % depoimentos.length;
+
+        depoimentos[depoAtual].style.display = 'flex';
+      }, 4000);
+    }
+  }
+
+  // ==========================================
+  // COPIAR CHAVES PIX
+  // ==========================================
+
+  async function copiarTexto(texto) {
+    try {
+      await navigator.clipboard.writeText(texto);
+      return true;
+    } catch (erro) {
+      const campo = document.createElement('textarea');
+
+      campo.value = texto;
+      campo.style.position = 'fixed';
+      campo.style.opacity = '0';
+
+      document.body.appendChild(campo);
+      campo.select();
+
+      const sucesso = document.execCommand('copy');
+
+      campo.remove();
+
+      return sucesso;
+    }
+  }
+
+  function mostrarMensagemCopiado(botao) {
+    if (!botao) return;
+
+    const mensagem = botao.querySelector('.msg-copiado');
+
+    if (!mensagem) return;
+
+    mensagem.style.display = 'block';
+
+    setTimeout(() => {
+      mensagem.style.display = 'none';
+    }, 2000);
+  }
+
+  async function configurarBotaoCopiar(botaoId, chaveId) {
+    const botao = document.getElementById(botaoId);
+    const chave = document.getElementById(chaveId);
+
+    if (!botao || !chave) return;
+
+    botao.addEventListener('click', async () => {
+      const sucesso = await copiarTexto(chave.textContent.trim());
+
+      if (sucesso) {
+        mostrarMensagemCopiado(botao);
+      } else {
+        alert('Falha ao copiar. Copie manualmente.');
+      }
+    });
+  }
+
+  configurarBotaoCopiar('btn-copiar-pix', 'pix-key');
+  configurarBotaoCopiar('btn-copiar-pix-2', 'pix-key-2');
+
+  // ==========================================
+  // ELEMENTOS DO QR CODE
+  // ==========================================
+
+  const valorBtns = document.querySelectorAll('.valor-btn');
+
+  const qrCodeImg = document.getElementById('qr-code-img');
+  const qrText = document.getElementById('qr-text');
+  const loadingModal = document.getElementById('loading-modal');
+
+  const confirmacaoContainer = document.getElementById(
+    'confirmacao-doacao-container'
+  );
+
+  // ==========================================
+  // IMAGENS DOS QR CODES
+  // ==========================================
+
+  const qrCodesUrls = {
+    '2': './imagens/imagem2.png',
+    '10': './imagens/imagem10.png',
+    '15': './imagens/imagem15.jpeg',
+    '30': './imagens/imagem30.jpeg',
+    '75': './imagens/imagem75.jpeg',
+    '150': './imagens/imagem150.jpeg',
+    '350': './imagens/imagem350.jpeg',
+    '750': './imagens/imagem750.jpeg'
+  };
+
+  // ==========================================
+  // RASTREAMENTO INITIATECHECKOUT
+  // ==========================================
+
+  function rastrearInicioDoacao(valor) {
+    const dados = {
+      value: Number(valor),
+      currency: 'BRL',
+      content_name: `Doacao PIX R$${valor}`
+    };
+
+    // Meta Pixel
+    if (typeof window.fbq === 'function') {
+      window.fbq('track', 'InitiateCheckout', dados);
+    }
+
+    // TikTok Pixel
+    if (
+      typeof window.ttq !== 'undefined' &&
+      typeof window.ttq.track === 'function'
+    ) {
+      window.ttq.track('InitiateCheckout', dados);
+    }
+  }
+
+  // ==========================================
+  // GERAÇÃO DO QR CODE
+  // ==========================================
+
+  valorBtns.forEach(botao => {
+    botao.addEventListener('click', event => {
+      const valor = event.currentTarget.getAttribute('data-valor');
+
+      const urlImagem = qrCodesUrls[valor];
+
+      if (!urlImagem) {
+        if (qrText) {
+          qrText.textContent =
+            `QR Code para R$${valor} não disponível.`;
+        }
+
+        if (qrCodeImg) qrCodeImg.style.display = 'none';
+
+        if (confirmacaoContainer) {
+          confirmacaoContainer.style.display = 'none';
+        }
+
+        return;
+      }
+
+      valorSelecionadoAtual = Number(valor);
+      confirmacaoJaEnviada = false;
+
+      geracaoAtual++;
+
+      const geracaoDestaVez = geracaoAtual;
+
+      valorBtns.forEach(item => item.classList.remove('active'));
+
+      event.currentTarget.classList.add('active');
+
+      if (loadingModal) {
+        loadingModal.style.display = 'flex';
+      }
+
+      document.body.style.overflow = 'hidden';
+
+      if (confirmacaoContainer) {
+        confirmacaoContainer.style.display = 'none';
+      }
+
+      if (qrCodeImg) {
+        qrCodeImg.style.display = 'none';
+      }
+
+      if (qrText) {
+        qrText.textContent =
+          'Gerando QR Code... Ele aparecerá automaticamente!';
+      }
+
+      setTimeout(() => {
+
+        // Impede que um QR Code anterior substitua o mais recente
+        if (geracaoDestaVez !== geracaoAtual) return;
+
+        if (loadingModal) {
+          loadingModal.style.display = 'none';
+        }
+
+        document.body.style.overflow = '';
+
+        if (qrCodeImg) {
+          qrCodeImg.src = urlImagem;
+          qrCodeImg.style.display = 'block';
+        }
+
+        if (confirmacaoContainer) {
+          confirmacaoContainer.style.display = 'block';
+        }
+
+        if (qrText) {
+          qrText.textContent =
+            `QR Code PIX gerado para R$${valor}. Escaneie a imagem.`;
+        }
+
+        // Google Analytics, se estiver instalado
+        if (typeof window.gtag === 'function') {
+          window.gtag('event', 'pix_gerado', {
+            value: Number(valor),
+            currency: 'BRL'
+          });
+        }
+
+        // Meta e TikTok: uma chamada por geração de QR Code
+        rastrearInicioDoacao(valor);
+
+      }, 3000);
+    });
+  });
+
+  // ==========================================
+  // EVENTO DONATE
+  // BOTÃO "JÁ FIZ MEU PIX"
+  // ==========================================
+
+  document.addEventListener('click', function(event) {
+
+    const targetBtn = event.target.closest('#btn-ja-fiz-pix');
+
+    if (!targetBtn) return;
+
+    // Evita conversões repetidas
+    if (confirmacaoJaEnviada) return;
+
+    // Só permite confirmar depois da exibição do QR Code
+    if (
+      !confirmacaoContainer ||
+      confirmacaoContainer.style.display === 'none'
+    ) {
+      return;
+    }
+
+    confirmacaoJaEnviada = true;
+
+    const dadosDonate = {
+      value: valorSelecionadoAtual,
+      currency: 'BRL',
+      content_name: 'Doacao PIX declarada'
+    };
+
+    // Meta Pixel: evento padrão Donate
+    if (typeof window.fbq === 'function') {
+      window.fbq('track', 'Donate', dadosDonate);
+    }
+
+    // TikTok Pixel: evento personalizado Donate
+    if (
+      typeof window.ttq !== 'undefined' &&
+      typeof window.ttq.track === 'function'
+    ) {
+      window.ttq.track('Donate', dadosDonate);
+    }
+
+    // Atualiza a página
+    if (confirmacaoContainer) {
+      confirmacaoContainer.style.display = 'none';
+    }
+
+    if (qrCodeImg) {
+      qrCodeImg.style.display = 'none';
+    }
+
+    if (qrText) {
+      qrText.textContent =
+        'Obrigado por informar sua doação! Sua ajuda faz a diferença.';
+    }
+
+    setTimeout(() => {
+      alert(
+        'Obrigado por confirmar sua ajuda! Sua doação faz toda a diferença para a Lívia.'
+      );
+    }, 150);
+
+  });
+
+</script>
+
+
+</body>
+</html>
