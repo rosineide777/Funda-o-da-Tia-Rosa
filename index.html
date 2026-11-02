@@ -94,16 +94,17 @@
         /* CARD */
 
         .card {
-            background-color: #fff;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.10);
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-            border: 1px solid #e5e5e5;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.10);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border: 1px solid #e5e5e5;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
 
         .card:hover {
             transform: translateY(-4px);
@@ -367,120 +368,124 @@ footer {
         <h1>Diário de um Recomeço</h1>
 
         <h2>
-            Toda história merece uma nova chance. Toda pessoa merece a oportunidade de recomeçar. ❤️
+            Toda história merece uma nova chance. Toda pessoa merece a oportunidade de recomeçar. 🕊️❤️
         </h2>
 
     </section>
 
     <!-- CAMPANHAS -->
 
-    <main class="campanhas">
+<main class="campanhas">
 
-        <h2>Conheça nossas campanhas</h2>
+    <h2>Conheça nossas campanhas</h2>
 
-        <p class="descricao-campanhas">
-            Escolha uma campanha e conheça sua história.
-            Toda contribuição pode fazer a diferença.
-        </p>
+    <p class="descricao-campanhas">
+        Escolha uma campanha e conheça sua história.
+        Toda contribuição pode fazer a diferença.
+    </p>
 
-        <div class="cards-container">
+    <div class="cards-container">
 
-            <!-- CARD 1 -->
+        <!-- CARD 1 -->
 
-            <article class="card">
+        <article class="card"
+            onclick="window.location.href='./SiteVaquinha1/index.html'">
 
-                <div class="card-imagem">
+            <div class="card-imagem">
 
-                    <img
-                        src="https://midias.diariodepernambuco.com.br/static/app/noticia_127983242361/2015/03/19/567166/20150319201657525960o.jpg"
-                        alt="Campanha 1"
-                    >
+                <img
+                    src="https://midias.diariodepernambuco.com.br/static/app/noticia_127983242361/2015/03/19/567166/20150319201657525960o.jpg"
+                    alt="Campanha 1"
+                >
 
-                </div>
+            </div>
 
-                <div class="card-conteudo">
+            <div class="card-conteudo">
 
-                    <h3>Campanha 1</h3>
+                <h3>Campanha 1</h3>
 
-                    <p>
-                        Aqui, <strong>cada animal resgatado</strong> recebe cuidado veterinário, 
-                        carinho e a oportunidade de recomeçar. Mas isso <strong>só 
-                        é possível com sua ajuda.</strong>
-                    </p>
+                <p>
+                    Aqui, <strong>cada animal resgatado</strong> recebe cuidado veterinário,
+                    carinho e a oportunidade de recomeçar. Mas isso <strong>só
+                    é possível com sua ajuda.</strong>
+                </p>
 
-                    <a href="./index2.html" class="botao">
-                        Conhecer campanha
-                    </a>
+                <a href="./SiteVaquinha1/index.html" class="botao">
+                    Conhecer campanha
+                </a>
 
-                </div>
+            </div>
 
-            </article>
+        </article>
 
-            <!-- CARD 2 -->
+        <!-- CARD 2 -->
 
-            <article class="card">
+        <article class="card"
+            onclick="window.location.href='./SiteVaquinha2/index.html'">
 
-                <div class="card-imagem">
+            <div class="card-imagem">
 
-                    <img
-                        src="./imagens/vaq2.png"
-                        alt="Campanha 2"
-                    >
+                <img
+                    src="./SiteVaquinha2/imagens/vaq2.png"
+                    alt="Campanha 2"
+                >
 
-                </div>
+            </div>
 
-                <div class="card-conteudo">
+            <div class="card-conteudo">
 
-                    <h3>Campanha 2</h3>
+                <h3>Campanha 2</h3>
 
-                    <p>
-                        A <strong>Lívia</strong> precisa da nossa união para salvar sua vida. 
-                        Ela enfrenta um <strong>grave problema de saúde</strong> e precisa passar 
-                        por uma cirurgia de urgência.
-                    </p>
+                <p>
+                    A <strong>Lívia</strong> precisa da nossa união para salvar sua vida.
+                    Ela enfrenta um <strong>grave problema de saúde</strong> e precisa passar
+                    por uma cirurgia de urgência.
+                </p>
 
-                    <a href="./SiteVaquinha2/index.html" class="botao">
-                        Conhecer campanha
-                    </a>
+                <a href="./SiteVaquinha2/index.html" class="botao">
+                    Conhecer campanha
+                </a>
 
-                </div>
+            </div>
 
-            </article>
+        </article>
 
-            <!-- CARD 3 -->
+        <!-- CARD 3 -->
 
-            <article class="card">
+        <article class="card"
+            onclick="window.location.href='./SiteVaquinha3/index.html'">
 
-                <div class="card-imagem">
+            <div class="card-imagem">
 
-                    <img
-                        src="./imagens/vaq3.png"
-                        alt="Campanha 3"
-                    >
+                <img
+                    src="./SiteVaquinha3/imagens/vaq3.png"
+                    alt="Campanha 3"
+                >
 
-                </div>
+            </div>
 
-                <div class="card-conteudo">
+            <div class="card-conteudo">
 
-                    <h3>Campanha 3</h3>
+                <h3>Campanha 3</h3>
 
-                    <p>
-                        A pequena <strong>Maria Luísa</strong> precisa passar por uma <strong>cirurgia de urgência</strong> para remover um nódulo 
-                        na garganta que está comprometendo o osso da região, colocando sua 
-                        <strong>vida em sério risco.</strong>
-                    </p>
+                <p>
+                    A pequena <strong>Maria Luísa</strong> precisa passar por uma
+                    <strong>cirurgia de urgência</strong> para remover um nódulo
+                    na garganta que está comprometendo o osso da região, colocando sua
+                    <strong>vida em sério risco.</strong>
+                </p>
 
-                    <a href="./SiteVaquinha3/index.html" class="botao">
-                        Conhecer campanha
-                    </a>
+                <a href="./SiteVaquinha3/index.html" class="botao">
+                    Conhecer campanha
+                </a>
 
-                </div>
+            </div>
 
-            </article>
+        </article>
 
-        </div>
+    </div>
 
-    </main>
+</main>
 
     <!-- TEXTO EMOCIONAL ABAIXO DOS CARDS -->
 
