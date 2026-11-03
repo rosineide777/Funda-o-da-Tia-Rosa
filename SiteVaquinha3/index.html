@@ -1165,69 +1165,73 @@
   });
 
   // ==========================================
-  // EVENTO DONATE
-  // BOTÃO "JÁ FIZ MEU PIX"
-  // ==========================================
+// EVENTO DONATE / CONVERSÃO
+// BOTÃO "JÁ FIZ MEU PIX"
+// ==========================================
 
-  document.addEventListener('click', function(event) {
+document.addEventListener('click', function(event) {
 
-    const targetBtn = event.target.closest('#btn-ja-fiz-pix');
+  const targetBtn = event.target.closest('#btn-ja-fiz-pix');
 
-    if (!targetBtn) return;
+  if (!targetBtn) return;
 
-    // Evita conversões repetidas
-    if (confirmacaoJaEnviada) return;
+  // Evita conversões repetidas
+  if (confirmacaoJaEnviada) return;
 
-    // Só permite confirmar depois da exibição do QR Code
-    if (
-      !confirmacaoContainer ||
-      confirmacaoContainer.style.display === 'none'
-    ) {
-      return;
-    }
+  // Só permite confirmar depois da exibição do QR Code
+  if (
+    !confirmacaoContainer ||
+    confirmacaoContainer.style.display === 'none'
+  ) {
+    return;
+  }
 
-    confirmacaoJaEnviada = true;
+  confirmacaoJaEnviada = true;
 
-    const dadosDonate = {
+  const dadosDonate = {
+    value: valorSelecionadoAtual,
+    currency: 'BRL',
+    content_name: 'Doacao PIX declarada'
+  };
+
+  // Meta Pixel: evento padrão Donate (mantido)
+  if (typeof window.fbq === 'function') {
+    window.fbq('track', 'Donate', dadosDonate);
+  }
+
+  // TikTok Pixel: alterado para o evento padrão CompletePayment
+  if (
+    typeof window.ttq !== 'undefined' &&
+    typeof window.ttq.track === 'function'
+  ) {
+    window.ttq.track('CompletePayment', {
+      content_name: 'Doacao PIX declarada',
       value: valorSelecionadoAtual,
-      currency: 'BRL',
-      content_name: 'Doacao PIX declarada'
-    };
+      currency: 'BRL'
+    });
+  }
 
-    // Meta Pixel: evento padrão Donate
-    if (typeof window.fbq === 'function') {
-      window.fbq('track', 'Donate', dadosDonate);
-    }
+  // Atualiza a página
+  if (confirmacaoContainer) {
+    confirmacaoContainer.style.display = 'none';
+  }
 
-    // TikTok Pixel: evento personalizado Donate
-    if (
-      typeof window.ttq !== 'undefined' &&
-      typeof window.ttq.track === 'function'
-    ) {
-      window.ttq.track('Donate', dadosDonate);
-    }
+  if (qrCodeImg) {
+    qrCodeImg.style.display = 'none';
+  }
 
-    // Atualiza a página
-    if (confirmacaoContainer) {
-      confirmacaoContainer.style.display = 'none';
-    }
+  if (qrText) {
+    qrText.textContent =
+      'Obrigado por informar sua doação! Sua ajuda faz a diferença. 🕊️❤️';
+  }
 
-    if (qrCodeImg) {
-      qrCodeImg.style.display = 'none';
-    }
+  setTimeout(() => {
+    alert(
+      'Obrigado por confirmar sua ajuda! Sua doação faz toda a diferença para a Maria Luísa. 🕊️❤️'
+    );
+  }, 150);
 
-    if (qrText) {
-      qrText.textContent =
-        'Obrigado por informar sua doação! Sua ajuda faz a diferença. 🕊️❤️';
-    }
-
-    setTimeout(() => {
-      alert(
-        'Obrigado por confirmar sua ajuda! Sua doação faz toda a diferença para a Maria Luísa. 🕊️❤️'
-      );
-    }, 150);
-
-  });
+});
 
 </script>
 
