@@ -876,7 +876,7 @@
 </footer>
 
 
-  <!-- Estilos do Pop-up de Doações -->
+<!-- Estilos do Pop-up de Doações - APOIADORES  -->
 <style>
   .donation-toast {
     position: fixed;
@@ -920,10 +920,9 @@
   <div class="donation-toast-text" id="donation-toast-text"></div>
 </div>
 
-<!-- Script do Gerador Automático de Nomes e Valores -->
+<!-- Script do Gerador Automático de Nomes -->
 <script>
   (function () {
-    // Listas base para combinar e gerar milhares de variações únicas
     const primeirosNomes = [
       "Ana", "Maria", "João", "Carlos", "José", "Lucas", "Gabriel", "Matheus", "Pedro", "Marcos",
       "Rafael", "Daniel", "Bruno", "Eduardo", "Felipe", "Rodrigo", "Gustavo", "Alexandre", "Leandro", "Diego",
@@ -943,10 +942,6 @@
       "Borges", "Campos", "Barros", "Duarte", "Pires", "Cunha", "Guedes", "Moura", "Siqueira", "Farias"
     ];
 
-    // Lista de valores comuns de doação
-    const valores = ["R$ 2,00","R$ 10,00", "R$ 15,00", "R$ 20,00", "R$ 25,00", "R$ 30,00", "R$ 50,00", "R$ 100,00", "R$ 150,00", "R$ 200,00", "R$ 350,00"];
-
-    // Histórico para evitar repetir os últimos nomes gerados na mesma sessão
     let ultimosNomes = [];
 
     function gerarNomeAleatorio() {
@@ -973,23 +968,19 @@
 
     function mostrarDoacao() {
       const nome = gerarNomeAleatorio();
-      const valor = valores[Math.floor(Math.random() * valores.length)];
 
-      toastText.innerHTML = `<strong>${nome}</strong> acabou de doar <strong>${valor}</strong>!`;
+      // Frase escolhida aplicada aqui
+      toastText.innerHTML = `<strong>${nome}</strong> está apoiando agora.`;
 
-      // Mostra o pop-up na tela
       toast.classList.add("show");
 
-      // Fica visível por 4 segundos
       setTimeout(() => {
         toast.classList.remove("show");
       }, 4000);
     }
 
-    // Primeira exibição 3 segundos após abrir a página
     setTimeout(() => {
       mostrarDoacao();
-      // Repete ciclicamente a cada 9 segundos (suave e natural)
       setInterval(mostrarDoacao, 15000);
     }, 3000);
   })();
