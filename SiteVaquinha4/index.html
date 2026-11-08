@@ -881,6 +881,129 @@ O pequeno <strong>Guilherme, de apenas 9 anos</strong>, precisa da nossa união 
   </p>
 </footer>
 
+  // ==========================================
+  // Script do Gerador Automático de Nomes e Valores
+  // ==========================================
+
+  <!-- Estilos do Pop-up de Doações -->
+<style>
+  .donation-toast {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: #ffffff;
+    color: #333333;
+    padding: 12px 18px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    z-index: 9999;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease-in-out;
+    pointer-events: none;
+    border-left: 4px solid #25d366;
+  }
+
+  .donation-toast.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .donation-toast-icon {
+    font-size: 20px;
+  }
+
+  .donation-toast-text strong {
+    color: #111111;
+  }
+</style>
+
+<!-- Elemento HTML da Notificação -->
+<div id="donation-toast" class="donation-toast">
+  <span class="donation-toast-icon">❤️</span>
+  <div class="donation-toast-text" id="donation-toast-text"></div>
+</div>
+
+<!-- Script do Gerador Automático de Nomes e Valores -->
+<script>
+  (function () {
+    // Listas base para combinar e gerar milhares de variações únicas
+    const primeirosNomes = [
+      "Ana", "Maria", "João", "Carlos", "José", "Lucas", "Gabriel", "Matheus", "Pedro", "Marcos",
+      "Rafael", "Daniel", "Bruno", "Eduardo", "Felipe", "Rodrigo", "Gustavo", "Alexandre", "Leandro", "Diego",
+      "Juliana", "Fernanda", "Camila", "Larissa", "Beatriz", "Mariana", "Amanda", "Bruna", "Letícia", "Vanessa",
+      "Patrícia", "Aline", "Jéssica", "Débora", "Tatiane", "Priscila", "Renata", "Sabrina", "Monique", "Raquel",
+      "Antônio", "Francisco", "Luiz", "Paulo", "Fernando", "Ricardo", "Marcelo", "Sérgio", "Adriano", "Thiago",
+      "Sandra", "Claudia", "Adriana", "Cristiane", "Luciana", "Rosana", "Eliane", "Mônica", "Simone", "Carla",
+      "Vitor", "Vinicius", "Igor", "Samuel", "Danilo", "Caio", "Renato", "Ronaldo", "Fabio", "Guilherme",
+      "Natália", "Bianca", "Flávia", "Caroline", "Paloma", "Viviane", "Helena", "Alice", "Sophia", "Manuela"
+    ];
+
+    const sobrenomes = [
+      "Silva", "Santos", "Oliveira", "Souza", "Rodrigues", "Ferreira", "Alves", "Pereira", "Lima", "Gomes",
+      "Costa", "Ribeiro", "Martins", "Carvalho", "Almeida", "Lopes", "Soares", "Fernandes", "Vieira", "Barbosa",
+      "Rocha", "Dias", "Nascimento", "Andrade", "Moreira", "Nunes", "Marques", "Machado", "Mendes", "Freitas",
+      "Cardoso", "Ramos", "Gonçalves", "Santana", "Teixeira", "Araújo", "Cavalcante", "Farias", "Azevedo", "Melo",
+      "Borges", "Campos", "Barros", "Duarte", "Pires", "Cunha", "Guedes", "Moura", "Siqueira", "Farias"
+    ];
+
+    // Lista de valores comuns de doação
+    const valores = ["R$ 2,00","R$ 10,00", "R$ 15,00", "R$ 20,00", "R$ 25,00", "R$ 30,00", "R$ 50,00", "R$ 100,00", "R$ 150,00", "R$ 200,00", "R$ 350,00"];
+
+    // Histórico para evitar repetir os últimos nomes gerados na mesma sessão
+    let ultimosNomes = [];
+
+    function gerarNomeAleatorio() {
+      let nomeCompleto;
+      do {
+        const p = primeirosNomes[Math.floor(Math.random() * primeirosNomes.length)];
+        const s = sobrenomes[Math.floor(Math.random() * sobrenomes.length)];
+        const usaInicial = Math.random() > 0.5;
+        const inicial = usaInicial ? " " + sobrenomes[Math.floor(Math.random() * sobrenomes.length)][0] + "." : "";
+        
+        nomeCompleto = `${p} ${s}${inicial}`;
+      } while (ultimosNomes.includes(nomeCompleto));
+
+      ultimosNomes.push(nomeCompleto);
+      if (ultimosNomes.length > 30) {
+        ultimosNomes.shift();
+      }
+
+      return nomeCompleto;
+    }
+
+    const toast = document.getElementById("donation-toast");
+    const toastText = document.getElementById("donation-toast-text");
+
+    function mostrarDoacao() {
+      const nome = gerarNomeAleatorio();
+      const valor = valores[Math.floor(Math.random() * valores.length)];
+
+      toastText.innerHTML = `<strong>${nome}</strong> acabou de doar <strong>${valor}</strong>!`;
+
+      // Mostra o pop-up na tela
+      toast.classList.add("show");
+
+      // Fica visível por 4 segundos
+      setTimeout(() => {
+        toast.classList.remove("show");
+      }, 4000);
+    }
+
+    // Primeira exibição 3 segundos após abrir a página
+    setTimeout(() => {
+      mostrarDoacao();
+      // Repete ciclicamente a cada 9 segundos (suave e natural)
+      setInterval(mostrarDoacao, 15000);
+    }, 3000);
+  })();
+</script>
+
 
 <script>
   // ==========================================
